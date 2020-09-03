@@ -976,15 +976,15 @@ function setTeamName(data) {
   $('#teamName').text(data.name);
 }
 
-socket.on('SetTeamName', setTeamName);
-
 $("#set-team-name").click(function(){
     socket.emit('SetTeamName', {
       name: $("#teamNameTextBox").val()
     });
-    
+
     $('#teamName').text($("#teamNameTextBox").val());
 });
+
+socket.on('SetTeamName', setTeamName);
 
 
   init();
