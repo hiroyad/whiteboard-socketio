@@ -934,12 +934,12 @@ tools.text = function () {
 
   // Set Team Name
 
-  function onSetTeam(data) {
+  function onTeam(data) {
     $('#teamName').text(data.teamName);
   }
 
-  function setTeamName() {
-      socket.emit('abcdef', {
+  function team() {
+      socket.emit('Abcdef', {
           CleardrawingBoard: true,
         teamName: $("#teamNameTextBox").val()
       });
@@ -948,7 +948,7 @@ tools.text = function () {
   }
 
   $("#set-team-name").click(function(){
-      setTeamName();
+      team();
   });
 
 
@@ -972,9 +972,9 @@ tools.text = function () {
             clearAll_update();
     }
 
-//  socket.on('Clearboard', onClearAll);
+  socket.on('Clearboard', onClearAll);
 
-socket.on('abcdef', onSetTeam);
+socket.on('Abcdef', onTeam);
 $("#clear-all").click(function(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     contexto.clearRect(0, 0, canvaso.width, canvaso.height);
