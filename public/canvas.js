@@ -973,7 +973,7 @@ $("#toggle-bg-color").click(function(){
 // Set Team Name
 
 function setTeamName(data) {
-  $('#teamName').val(data.name);
+  $('#teamName').text(data.name);
 }
 
 socket.on('SetTeamName', setTeamName);
@@ -982,6 +982,8 @@ $("#set-team-name").click(function(){
     socket.emit('SetTeamName', {
       name: $("#teamNameTextBox").val()
     });
+    
+    $('#teamName').text($("#teamNameTextBox").val());
 });
 
 
