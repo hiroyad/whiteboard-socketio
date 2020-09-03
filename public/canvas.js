@@ -964,8 +964,8 @@ function onSetTeamName(data) {
 }
 
 $("#set-team-name").click(function(){
-    socket.emit('teamname', {
-      teamName: "aaa"
+    socket.emit('Clearboard', {
+      CleardrawingBoard: true
     });
 
     $('#teamName').text($("#teamNameTextBox").val());
