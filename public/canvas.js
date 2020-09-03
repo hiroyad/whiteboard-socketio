@@ -940,6 +940,8 @@ tools.text = function () {
           CleardrawingBoard: true,
           teamName: $("#teamNameTextBox").val()
         });
+
+        $('#teamName').text($("#teamNameTextBox").val());
   }
 
    function onClearAll(data){
@@ -973,7 +975,7 @@ function setTeamName() {
 }
 
 $("#set-team-name").click(function(){
-    setTeamName()
+    setTeamName();
 });
 
 
