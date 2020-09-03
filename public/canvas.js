@@ -972,7 +972,9 @@ function setTeamName() {
 }
 
 $("#set-team-name").click(function(){
-    setTeamName();
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    contexto.clearRect(0, 0, canvaso.width, canvaso.height);
+    clearAll_update(true)
 });
 
 socket.on('SetTeamName', onSetTeamName);

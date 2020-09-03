@@ -75,7 +75,21 @@ label{
 		<button type="button" class="btn btn-warning btn-sm" value="pencil" id="pencil-button" style="display: none;">Pencil</button>
         <button type="button" class="btn btn-warning btn-sm" id="clear-all">Clear All</button>
         <button type="button" class="btn btn-warning btn-sm" id="toggle-bg-color">Change BG Color</button>
-        </p>
+		<input type="hidden" id="colour-picker" value="#ffffff" style="width:80px;" class="jscolor {width:243, height:150, position:'right',
+    borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}">
+		<span class="form-group" style="width: 90px;display: none;">
+          <label for="line-Width">Thickness: </label>
+          <select class="form-control" id="line-Width">
+            <option>2</option>
+            <option selected>4</option>
+            <option>6</option>
+            <option>8</option>
+            <option>10</option>
+            <option>12</option>
+            <option>14</option>
+          </select>
+        </span>
+	    </p>
 
         <div id="container">
           <canvas id="imageView" width="1000" height="500">
