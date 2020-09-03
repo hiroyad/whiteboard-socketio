@@ -964,14 +964,14 @@ function onSetTeamName(data) {
 }
 
 $("#set-team-name").click(function(){
-    socket.emit('SetTeamName', {
+    socket.emit('teamname', {
       teamName: $("#teamNameTextBox").val()
     });
 
     $('#teamName').text($("#teamNameTextBox").val());
 });
 
-socket.on('SetTeamName', onSetTeamName);
+socket.on('teamname', onSetTeamName);
 
 
 // Toggle BG Color
