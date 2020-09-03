@@ -76,17 +76,17 @@ label{
     </div>
 -->
         <p style="">
-        <button type="button" class="btn btn-warning btn-sm" value="pencil" id="pencil-button">Pencil</button>
+		<button type="button" class="btn btn-warning btn-sm" value="pencil" id="pencil-button" style="display: none;">Pencil</button>
 <!--        <button type="button" class="btn btn-warning btn-sm" value="rect" id="rect-button">Rectangle</button>
         <button type="button" class="btn btn-warning btn-sm" value="circle" id="circle-button">Circle</button>
         <button type="button" class="btn btn-warning btn-sm" value="ellipse" id="ellipse-button">Ellipse</button>
         <button type="button" class="btn btn-warning btn-sm" value="line" id="line-button">Line</button>
         <button type="button" class="btn btn-warning btn-sm" value="text" id="text-button">Text</button>
 -->        <button type="button" class="btn btn-warning btn-sm" id="clear-all">Clear All</button>
-<!--        <label for="colour" style="position:absolute;">Colour : </label>
-        <input id="colour-picker" value="#ffffff" style="width:80px;" class="jscolor {width:243, height:150, position:'right',
+<!--        <label for="colour" style="position:absolute;">Colour : </label>-->
+        <input type="hidden" id="colour-picker" value="#ffffff" style="width:80px;" class="jscolor {width:243, height:150, position:'right',
     borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}">
--->
+
 		<input id="teamNameTextBox" value="なまえをいれてください" style="width:300px;">
         <button type="button" class="btn btn-warning btn-sm" id="set-team-name">Set Team Name</button>
         <!-- <span class="form-group" style="width: 100px;display: inline-block;">
@@ -110,6 +110,7 @@ label{
             <option>14</option>
           </select>
         </span>
+<!--
          <span class="form-group" style="width: 130px;display: inline-block;">
           <label for="draw-text-font-family">Font: </label>
           <select class="form-control" id="draw-text-font-family">
@@ -139,6 +140,7 @@ label{
             <option value="40">40 Px</option>
           </select>
         </span>
+-->
         </p>
 
         <div id="container">
