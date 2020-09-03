@@ -963,15 +963,19 @@ function onSetTeamName(data) {
   $('#teamName').text("aaa");
 }
 
-$("#set-team-name").click(function(){
-    socket.emit('Clearboard', {
-      CleardrawingBoard: true
+function setTeamName() {
+    socket.emit('SetTeamName', {
+      teamName: $("#teamNameTextBox").val()
     });
 
     $('#teamName').text($("#teamNameTextBox").val());
+}
+
+$("#set-team-name").click(function(){
+    setTeamName();
 });
 
-socket.on('teamname', onSetTeamName);
+socket.on('SetTeamName', onSetTeamName);
 
 
 // Toggle BG Color
