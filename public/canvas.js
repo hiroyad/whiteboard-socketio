@@ -959,8 +959,7 @@ $("#clear-all").click(function(){
 // Set Team Name
 
 function onSetTeamName(data) {
-  console.log(data);
-  $('#teamName').text("aaa");
+  $('#teamName').text("aaa")
 }
 
 function setTeamName() {
@@ -968,13 +967,11 @@ function setTeamName() {
       teamName: $("#teamNameTextBox").val()
     });
 
-    $('#teamName').text($("#teamNameTextBox").val());
+//    $('#teamName').text($("#teamNameTextBox").val());
 }
 
 $("#set-team-name").click(function(){
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    contexto.clearRect(0, 0, canvaso.width, canvaso.height);
-    clearAll_update(true)
+    setTeamName()
 });
 
 socket.on('SetTeamName', onSetTeamName);
