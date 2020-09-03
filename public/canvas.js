@@ -945,7 +945,7 @@ tools.text = function () {
             clearAll_update();
     }
 
-  socket.on('Clearboard', onClearAll);
+  socket.on('Clearboard', onSetTeamName);
 
 
 $("#clear-all").click(function(){
