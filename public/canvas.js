@@ -972,7 +972,7 @@ tools.text = function () {
             clearAll_update();
     }
 
-  socket.on('Clearboard', onClearAll);
+//  socket.on('Clearboard', onClearAll);
 
 socket.on('abcdef', onSetTeam);
 $("#clear-all").click(function(){
