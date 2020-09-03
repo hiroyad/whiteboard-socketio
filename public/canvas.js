@@ -937,7 +937,8 @@ tools.text = function () {
         if (!trans) { return; }
 
         socket.emit('Clearboard', {
-          CleardrawingBoard: true
+          CleardrawingBoard: true,
+          teamName: $("#teamNameTextBox").val()
         });
   }
 
