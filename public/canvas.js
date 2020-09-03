@@ -942,6 +942,7 @@ tools.text = function () {
   }
 
    function onClearAll(data){
+            $('#teamName').text("aaa");
             clearAll_update();
     }
 
