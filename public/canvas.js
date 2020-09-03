@@ -942,7 +942,6 @@ tools.text = function () {
   }
 
    function onClearAll(data){
-            $('#teamName').text("aaa");
             clearAll_update();
     }
 
@@ -954,6 +953,26 @@ $("#clear-all").click(function(){
     contexto.clearRect(0, 0, canvaso.width, canvaso.height);
     clearAll_update(true)
 });
+
+
+
+// Set Team Name
+
+function setTeamName(data) {
+  console.log(data);
+  $('#teamName').text("aaa");
+}
+
+$("#set-team-name").click(function(){
+    socket.emit('SetTeamName', {
+      teamName: $("#teamNameTextBox").val()
+    });
+
+    $('#teamName').text($("#teamNameTextBox").val());
+});
+
+socket.on('SetTeamName', setTeamName);
+
 
 // Toggle BG Color
 
@@ -969,25 +988,6 @@ function toggleBGColor() {
 $("#toggle-bg-color").click(function(){
     toggleBGColor();
 });
-
-
-// Set Team Name
-
-function setTeamName(data) {
-  console.log(data);
-  $('#teamName').text(data.teamName);
-}
-
-$("#set-team-name").click(function(){
-    socket.emit('SetTeamName', {
-      teamName: $("#teamNameTextBox").val()
-    });
-
-    $('#teamName').text($("#teamNameTextBox").val());
-});
-
-socket.on('SetTeamName', setTeamName);
-
 
   init();
 
