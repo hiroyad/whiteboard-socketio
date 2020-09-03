@@ -939,7 +939,7 @@ tools.text = function () {
   }
 
   function team() {
-      socket.emit('Clearboard', {
+      socket.emit('Clearboard2', {
           CleardrawingBoard: true,
         teamName: $("#teamNameTextBox").val()
       });
