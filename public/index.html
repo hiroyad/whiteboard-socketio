@@ -48,7 +48,7 @@
     margin-right: 5px;
 }
 .container .btn.btn-sm:active{
-   background: #06f; 
+   background: #06f;
 }
 label{
     color: #fff;
@@ -56,9 +56,9 @@ label{
     </style>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+
 	</head>
-    
+
 	<body style="margin-top:30px;">
 	<div class="container">
     <div class="alert alert-info" style="padding: 10px !important; margin-bottom: 5px; width:88%">
@@ -66,15 +66,18 @@ label{
     </div>
         <p style="">
         <button type="button" class="btn btn-warning btn-sm" value="pencil" id="pencil-button">Pencil</button>
-        <button type="button" class="btn btn-warning btn-sm" value="rect" id="rect-button">Rectangle</button>
+<!--        <button type="button" class="btn btn-warning btn-sm" value="rect" id="rect-button">Rectangle</button>
         <button type="button" class="btn btn-warning btn-sm" value="circle" id="circle-button">Circle</button>
         <button type="button" class="btn btn-warning btn-sm" value="ellipse" id="ellipse-button">Ellipse</button>
         <button type="button" class="btn btn-warning btn-sm" value="line" id="line-button">Line</button>
         <button type="button" class="btn btn-warning btn-sm" value="text" id="text-button">Text</button>
-        <button type="button" class="btn btn-warning btn-sm" id="clear-all">Clear All</button>
-        <label for="colour" style="position:absolute;">Colour : </label>
+-->        <button type="button" class="btn btn-warning btn-sm" id="clear-all">Clear All</button>
+<!--        <label for="colour" style="position:absolute;">Colour : </label>
         <input id="colour-picker" value="#ffffff" style="width:80px;" class="jscolor {width:243, height:150, position:'right',
     borderColor:'#FFF', insetColor:'#FFF', backgroundColor:'#666'}">
+-->
+		<input id="teamNameTextBox" value="なまえをいれてください" style="width:300px;">
+        <button type="button" class="btn btn-warning btn-sm" id="set-team-name">Set Team Name</button>
         <!-- <span class="form-group" style="width: 100px;display: inline-block;">
               <label for="draw-grid">Grid: </label>
               <select class="form-control" id="draw-grid">
@@ -88,7 +91,7 @@ label{
           <label for="line-Width">Thickness: </label>
           <select class="form-control" id="line-Width">
             <option>2</option>
-            <option>4</option>
+            <option selected>4</option>
             <option>6</option>
             <option>8</option>
             <option>10</option>
@@ -140,13 +143,13 @@ label{
           </canvas>
         </div>
     </div>
-    
+
 <!-- Script files -->
         <script src='jquery.min.js'></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="jscolor/jscolor.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
-		 <script src="canvas.js"></script> 
+		 <script src="canvas.js"></script>
 		<!-- <script src="canvas-backup-latest-v1.js"></script> -->
 
      <script type="text/javascript">

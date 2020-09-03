@@ -15,6 +15,16 @@
         background-color: #00f;
         border-radius: 5px;
       }
+	  #label {
+        bottom: 0px; /*下端に配置*/
+        position: absolute; /*absoluteに設定*/
+        padding: 0em 0em;
+        text-align: center;
+        width: 1000px;
+        color: white;
+		font-size: 52px;
+		background-color: rgba(30, 30, 30, 0.5);
+      }
       body{
         background: rgb(55,55,55) !important;
       }
@@ -48,7 +58,7 @@
     margin-right: 5px;
 }
 .container-fluid .btn.btn-sm:active{
-   background: #06f; 
+   background: #06f;
 }
 label{
     color: #fff;
@@ -56,9 +66,9 @@ label{
     </style>
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+
 	</head>
-    
+
 	<body>
 	<div class="container-fluid">
         <p style="">
@@ -77,15 +87,16 @@ label{
               href="http://www.apple.com/safari">Safari</a>, and <a
               href="http://www.konqueror.org">Konqueror</a>.</p>
           </canvas>
+		  <div id="teamName">なまえをいれてください</div>
         </div>
     </div>
-    
+
 <!-- Script files -->
         <script src='jquery.min.js'></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="jscolor/jscolor.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
-		 <script src="canvas.js"></script> 
+		 <script src="canvas.js"></script>
 		<!-- <script src="canvas-backup-latest-v1.js"></script> -->
 
      <script type="text/javascript">
