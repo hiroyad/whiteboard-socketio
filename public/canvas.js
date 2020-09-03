@@ -979,7 +979,7 @@ function setTeamName(data) {
 socket.on('SetTeamName', setTeamName);
 
 $("#set-team-name").click(function(){
-    socket.emit(SetTeamName, {
+    socket.emit('SetTeamName', {
       name: $("#teamNameTextBox").val()
     });
 });
