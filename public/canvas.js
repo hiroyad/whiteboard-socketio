@@ -954,6 +954,21 @@ $("#clear-all").click(function(){
     clearAll_update(true)
 });
 
+// Toggle BG Color
+
+function toggleBGColor() {
+  var bgColor = $('#container').css("background-color");
+  if (bgColor == "#00f") {
+    $('#container').css("background-color", "#f00");
+  } else {
+    $('#container').css("background-color", "#00f");
+  }
+}
+
+$("#toggle-bg-color").click(function(){
+    toggleBGColor()
+});
+
 
   init();
   
