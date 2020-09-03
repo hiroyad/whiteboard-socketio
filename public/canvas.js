@@ -966,13 +966,14 @@ function toggleBGColor() {
 }
 
 $("#toggle-bg-color").click(function(){
-    toggleBGColor()
+    toggleBGColor();
 });
 
 
 // Set Team Name
 
 function setTeamName(data) {
+  console.log(data);
   $('#teamName').text(data.name);
 }
 
