@@ -945,7 +945,7 @@ tools.text = function () {
             clearAll_update();
     }
 
-  socket.on('Clearboard', onSetTeamName);
+  socket.on('Clearboard', onClearAll);
 
 
 $("#clear-all").click(function(){
@@ -959,22 +959,22 @@ $("#clear-all").click(function(){
 // Set Team Name
 
 function onSetTeamName(data) {
-  $('#teamName').text("aaa")
+  $('#teamName').text(data.teamName);
 }
 
 function setTeamName() {
-    socket.emit('SetTeamName', {
-      CleardrawingBoard: true
+    socket.emit('setteam', {
+      teamName: $("#teamNameTextBox").val()
     });
 
-//    $('#teamName').text($("#teamNameTextBox").val());
+    $('#teamName').text($("#teamNameTextBox").val());
 }
 
 $("#set-team-name").click(function(){
     setTeamName()
 });
 
-socket.on('SetTeamName', onSetTeamName);
+socket.on('setteam', onSetTeamName);
 
 
 // Toggle BG Color
