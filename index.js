@@ -50,7 +50,11 @@ function onConnection(socket){
     socket.broadcast.emit('Clearboard', data);
     console.log(data);
   });
- 
+
+  socket.on('setTeamName', function(data){
+    socket.broadcast.emit('setTeamName', data);
+    console.log(data);
+  }); 
 }
 
 io.on('connection', onConnection);

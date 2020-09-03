@@ -931,27 +931,6 @@ tools.text = function () {
   //Text tool end
 
 
-
-  // Set Team Name
-
-  function onTeam(data) {
-    $('#teamName').text(data.teamName);
-  }
-
-  function team() {
-      socket.emit('Clearboard', {
-        teamName: $("#teamNameTextBox").val()
-      });
-
-      $('#teamName').text($("#teamNameTextBox").val());
-  }
-
-  $("#set-team-name").click(function(){
-      team();
-  });
-
-
-
   function clearAll_update(trans) {
     context.clearRect(0, 0, canvas.width, canvas.height);
     contexto.clearRect(0, 0, canvaso.width, canvaso.height);
@@ -961,15 +940,9 @@ tools.text = function () {
         socket.emit('Clearboard', {
           CleardrawingBoard: true,
         });
-
-        $('#teamName').text($("#teamNameTextBox").val());
   }
 
    function onClearAll(data){
-            if (data.teamName != null) {
-              $('#teamName').text(data.teamName);
-              return;
-            }
             clearAll_update();
     }
 
@@ -982,6 +955,25 @@ $("#clear-all").click(function(){
 });
 
 
+  // Set Team Name
+
+  function onSetTeamName(data) {
+    $('#teamName').text(data.teamName);
+  }
+
+  function setTeamName() {
+      socket.emit('setTeamName', {
+        teamName: $("#teamNameTextBox").val()
+      });
+
+      $('#teamName').text($("#teamNameTextBox").val());
+  }
+
+  socket.on('setTeamName', onSetTeamName);
+
+  $("#set-team-name").click(function(){
+      setTeamName();
+  });
 
 
 // Toggle BG Color
