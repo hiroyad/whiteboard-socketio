@@ -939,8 +939,7 @@ tools.text = function () {
   }
 
   function team() {
-      socket.emit('Clearboard2', {
-          CleardrawingBoard: true,
+      socket.emit('Clearboard', {
         teamName: $("#teamNameTextBox").val()
       });
 
@@ -961,20 +960,21 @@ tools.text = function () {
 
         socket.emit('Clearboard', {
           CleardrawingBoard: true,
-          teamName: $("#teamNameTextBox").val()
         });
 
         $('#teamName').text($("#teamNameTextBox").val());
   }
 
    function onClearAll(data){
-       $('#teamName').text(data.teamName);
+            if (data.teamName != null) {
+              $('#teamName').text(data.teamName);
+              return;
+            }
             clearAll_update();
     }
 
   socket.on('Clearboard', onClearAll);
 
-socket.on('Abcdef', onTeam);
 $("#clear-all").click(function(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     contexto.clearRect(0, 0, canvaso.width, canvaso.height);
