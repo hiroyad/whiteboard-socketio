@@ -958,7 +958,7 @@ $("#clear-all").click(function(){
 
 // Set Team Name
 
-function setTeamName(data) {
+function onSetTeamName(data) {
   console.log(data);
   $('#teamName').text("aaa");
 }
@@ -971,7 +971,7 @@ $("#set-team-name").click(function(){
     $('#teamName').text($("#teamNameTextBox").val());
 });
 
-socket.on('SetTeamName', setTeamName);
+socket.on('SetTeamName', onSetTeamName);
 
 
 // Toggle BG Color
