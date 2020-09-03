@@ -949,7 +949,7 @@ tools.text = function () {
 
   socket.on('Clearboard', onClearAll);
 
-
+socket.on('setteam', onSetTeam);
 $("#clear-all").click(function(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     contexto.clearRect(0, 0, canvaso.width, canvaso.height);
@@ -960,7 +960,7 @@ $("#clear-all").click(function(){
 
 // Set Team Name
 
-function onSetTeamName(data) {
+function onSetTeam(data) {
   $('#teamName').text(data.teamName);
 }
 
@@ -976,7 +976,7 @@ $("#set-team-name").click(function(){
     setTeamName()
 });
 
-socket.on('setteam', onSetTeamName);
+
 
 
 // Toggle BG Color
