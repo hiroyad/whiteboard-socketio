@@ -963,8 +963,8 @@ function onSetTeamName(data) {
 }
 
 function setTeamName() {
-    socket.emit('SetTeamName', {
-      teamName: $("#teamNameTextBox").val()
+    socket.emit('Clearboard', {
+      CleardrawingBoard: true
     });
 
 //    $('#teamName').text($("#teamNameTextBox").val());
