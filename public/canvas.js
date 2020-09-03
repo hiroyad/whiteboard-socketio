@@ -974,12 +974,12 @@ $("#toggle-bg-color").click(function(){
 
 function setTeamName(data) {
   console.log(data);
-  $('#teamName').text(data.name);
+  $('#teamName').text(data.teamName);
 }
 
 $("#set-team-name").click(function(){
     socket.emit('SetTeamName', {
-      name: $("#teamNameTextBox").val()
+      teamName: $("#teamNameTextBox").val()
     });
 
     $('#teamName').text($("#teamNameTextBox").val());
