@@ -963,7 +963,7 @@ function onSetTeamName(data) {
 }
 
 function setTeamName() {
-    socket.emit('Clearboard', {
+    socket.emit('SetTeamName', {
       CleardrawingBoard: true
     });
 
