@@ -943,6 +943,7 @@ tools.text = function () {
   }
 
    function onClearAll(data){
+       $('#teamName').text(data.teamName);
             clearAll_update();
     }
 
@@ -952,7 +953,7 @@ tools.text = function () {
 $("#clear-all").click(function(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     contexto.clearRect(0, 0, canvaso.width, canvaso.height);
-    clearAll_update(true)
+    clearAll_update(true);
 });
 
 
