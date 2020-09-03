@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>White Board</title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Collabrative White board">
+    <meta name="author" content="devan">
+		  <style type="text/css">
+      #container { position: relative; }
+      #container{
+        width: 1000px;
+        height: 500px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+      body{
+        background: rgb(55,55,55) !important;
+      }
+      #imageView { border: 1px solid #000; }
+      #imageTemp { position: absolute; top: 1px; left: 1px; }
+      canvas {
+        border-radius: 5px;
+        cursor: url(../img/pen.png), crosshair;
+    }
+    #text_tool {
+    position: absolute;
+    border: 1px dashed black;
+    outline: 0;
+    z-index:1000 !important;
+    display: none;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.container .btn.btn-sm{
+    background: #06f;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.5);
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-shadow: 0 1px #06f;
+    display: inline-block;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-right: 5px;
+}
+.container .btn.btn-sm:active{
+   background: #06f; 
+}
+label{
+    color: #fff;
+}
+    </style>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+	</head>
+    
+	<body>
+	<div class="container">
+        <p style="">
+        <button type="button" class="btn btn-warning btn-sm" id="clear-all">Clear All</button>
+        </p>
+
+        <div id="container">
+          <canvas id="imageView" width="1000" height="500">
+            <p>Unfortunately, your browser is currently unsupported by our web
+            application.  We are sorry for the inconvenience. Please use one of the
+            supported browsers listed below, or draw the image you want using an
+            offline tool.</p>
+            <p>Supported browsers: <a href="http://www.opera.com">Opera</a>, <a
+              href="http://www.mozilla.com">Firefox</a>, <a
+              href="http://www.apple.com/safari">Safari</a>, and <a
+              href="http://www.konqueror.org">Konqueror</a>.</p>
+          </canvas>
+        </div>
+    </div>
+    
+<!-- Script files -->
+        <script src='jquery.min.js'></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="jscolor/jscolor.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+		 <script src="canvas.js"></script> 
+		<!-- <script src="canvas-backup-latest-v1.js"></script> -->
+
+     <script type="text/javascript">
+      $(document).ready(function(){
+          var board_url = window.location.href;
+          $('.linkToBoard').attr("href",board_url);
+      });
+    </script>
+
+	</body>
+</html>
