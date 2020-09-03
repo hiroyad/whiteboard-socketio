@@ -958,7 +958,6 @@ $("#clear-all").click(function(){
 
 function toggleBGColor() {
   var bgColor = $('#container').css("background-color");
-  console.log(bgColor);
   if (bgColor == "rgb(0, 0, 255)") {
     $('#container').css("background-color", "#f00");
   } else {
